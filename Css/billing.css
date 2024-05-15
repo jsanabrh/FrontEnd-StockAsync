@@ -1,0 +1,162 @@
+:root {
+  --color-navbarLeft: rgb(255, 255, 255);
+  --color-text: rgb(0, 0, 0);
+  --color-textMenu: rgb(134, 136, 144);
+  --color-menuHover: rgb(238, 238, 238);
+  --color-menuHoverText: rgb(0, 0, 0);
+  --color-button: rgb(0, 0, 0);
+  --color-textButton: rgb(255, 255, 255);
+  --color-line: rgb(241, 241, 241);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background: #bdc3c7; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2c3e50,
+    #bdc3c7
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2c3e50,
+    #bdc3c7
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  display: flex;
+  flex-direction: row;
+}
+
+.navbarLeft {
+  width: 250px;
+  height: 100%;
+  overflow: hidden;
+  padding: 20px 15px;
+  background-color: var(--color-navbarLeft);
+  transition: width 0.5s ease;
+}
+
+.ocultNavbarLeft {
+  width: 80px;
+}
+
+.navbarLeft .namePage {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+}
+
+.navbarLeft .namePage ion-icon {
+  min-width: 50px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.navbarLeft .namePage span {
+  font-size: 25px;
+  margin-left: 5px;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.navbarLeft span.ocult {
+  opacity: 0;
+}
+
+/*------->Profile User*/
+
+.navbarLeft .userProfile {
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  background-color: var(--color-menuHover);
+  border-radius: 10px;
+}
+
+.navbarLeft .userProfile img {
+  width: 50px;
+  min-width: 50px;
+  border-radius: 10px;
+}
+
+.navbarLeft .userProfile .infoUser {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--color-text);
+  overflow: hidden;
+}
+
+.navbarLeft .userProfile .name-id {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.navbarLeft .userProfile .name {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.navbarLeft .userProfile .id {
+  font-size: 11px;
+}
+
+/*------->Navegation*/
+
+.navbarLeft .navegation {
+  margin-top: 15px;
+}
+
+.navbarLeft .navegation li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbarLeft .navegation a {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: var(--color-navbarLeft);
+  color: var(--color-textMenu);
+}
+
+.navbarLeft .navegation a:hover {
+  background-color: var(--color-menuHover);
+  color: var(--color-menuHoverText);
+}
+
+.navbarLeft .navegation ion-icon {
+  min-width: 50px;
+  font-size: 20px;
+}
+
+/*------------ Billing Container  --------------------*/
+
+.billing-container {
+  width: 80%;
+  margin: 2rem;
+  padding: 10px;
+  box-sizing: border-box;
+  box-shadow: 0 0.1rem 0.5rem #2c3e50;
+}
+
+.table-description {
+    background-color: red;
+}
+
+
