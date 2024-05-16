@@ -2,7 +2,8 @@
   --color-navbarLeft: rgb(255, 255, 255);
   --color-text: #fff;
   --color-textMenu: rgb(134, 136, 144);
-  /* --color-menuHover: rgba(238, 238, 238, 0.555); */
+  --color-menuHover: #353535; 
+  --color-background: #D1CFCF; 
   --color-menuHoverText: rgb(0, 0, 0);
   --color-button: rgb(0, 0, 0);
   --color-textButton: rgb(255, 255, 255);
@@ -15,38 +16,54 @@
   box-sizing: border-box;
 }
 
-body {
+/* body {
   height: 100vh;
   width: 100%;
-  background: #bdc3c7; /* fallback for old browsers */
+  background: #bdc3c7;
   background: -webkit-linear-gradient(
     to right,
     #2c3e50,
     #bdc3c7
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  );
   background: linear-gradient(
     to right,
     #2c3e50,
     #bdc3c7
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  );
 
   display: flex;
+} */
+
+body {
+  height: 100vh;
+  width: 100%;
+  background: var(--color-background); 
+  display: flex;
 }
+
+/* 
+.navbarLeft {
+  width: 250px;
+  height: 100%;
+  overflow: hidden;
+  padding: 20px 15px;
+  background: #bdc3c7; 
+  background: -webkit-linear-gradient(
+    to right,
+    #2c3e50,
+    #bdc3c7
+  );
+  background: linear-gradient(to right, #2c3e50, #bdc3c7);
+  transition: width 0.5s ease;
+}
+*/
 
 .navbarLeft {
   width: 250px;
   height: 100%;
   overflow: hidden;
   padding: 20px 15px;
-  background: #bdc3c7; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #2c3e50,
-    #bdc3c7
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #2c3e50, #bdc3c7);
-  /* background-color: var(--color-navbarLeft); */
-  transition: width 0.5s ease;
+  background: var(--color-menuHover);
 }
 
 .ocultNavbarLeft {
