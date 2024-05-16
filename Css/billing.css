@@ -178,7 +178,7 @@ body {
 }
 
 .table > :not(caption) > * > * {
-  background-color: #f0f0f027;
+  background-color: transparent;
   border: none;
 }
 
