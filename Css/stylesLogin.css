@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-image: radial-gradient(circle at 56.16% 120.44%, #496363 0, #445756 16.67%, #3c4644 33.33%, #303030 50%, #231b1e 66.67%, #1a0a12 83.33%, #120008 100%);
+}
+
+.container-form{
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(1000px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+}
+
+.input-form{
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid #fff;
+}
+
+.input-form label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+}
+
+input:focus ~ label,
+input:focus ~ :valid{
+    top: -5px;
+}
+
+.input-form input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+    color: #fff;
+}
+
+.input-form ion-icon{
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.5em;
+    top: 20px;
+}
+
+button{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bolder;
+}
+
+button:hover{
+    background-color: #496363;
+    transition: 0.15s;
+    color: #fff;
+}
