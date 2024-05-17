@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockSync - Inventary</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/Css/stylesInventary.css">
+    <link rel="icon" href="/Img/logo redondo sin fondo.png" />
+</head>
+
+<body>
+    <div class="navbarLeft">
+        <div class="namePage">
+            <img src="/Img/logo sin fondo.png" class="imgLogo" alt="Logo" />
+        </div>
+
+        <div class="userProfile">
+            <img src="/Img/profilePicture.png" alt="">
+            <div class="infoUser">
+                <div class="name-id">
+                    <span class="name">Juan Pablo</span>
+                    <span class="id">1000034345</span>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navegation">
+            <ul>
+                <li>
+                    <a href="">
+                        <ion-icon name="cube-outline"></ion-icon>
+                        <span>Inventary</span>
+                    </a>
+                </li>
+                <li>
+                <a href="">
+                    <ion-icon name="bag-add-outline"></ion-icon>
+                    <span>Add Product</span>
+                </a>
+                </li>
+                <li>
+                    <a href="/Html/admin/billingAdmin.html">
+                        <ion-icon name="newspaper-outline"></ion-icon>
+                        <span>Billing</span>
+                    </a>
+                </li>
+                <!--                 <li>
+                    <a href="">
+                        <ion-icon name="calendar-outline"></ion-icon>
+                        <span>Calendar</span>
+                    </a>
+                </li> -->
+                <!-- <li>
+                    <a href="">
+                        <ion-icon name="stats-chart-outline"></ion-icon>
+                        <span>Stats</span>
+                    </a>
+                </li> -->
+                <li>
+                    <a href="/Html/loginStockSync.html">
+                        <ion-icon name="exit-outline"></ion-icon>
+                        <span>LogOut</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <section class="inventary-container">
+        <div class="inventary-table">
+          <h3>INVENTARY</h3>
+        </div>
+    
+        <div class="table-description">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th colspan="2">Description</th>
+                  <th scope="col">Quantity</th>
+                  <th scope="col">Price</th>
+                </tr>
+              </thead>
+              <tbody class="table-group-divider">
+                <tr>
+                  <th scope="row">1</th>
+                  <td colspan="2">Camisa</td>
+                  <td>1</td>
+                  <td>20000</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td colspan="2">Pantalon</td>
+                  <td>3</td>
+                  <td>30000</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td colspan="2">Zapatos</td>
+                  <td>2</td>
+                  <td>50000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+      
+        </section>    
+
+    <!-- SCRIPT -->
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="/Js/index.js"></script>
+</body>
+
+</html>
