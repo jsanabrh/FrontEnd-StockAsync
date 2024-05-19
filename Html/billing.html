@@ -70,32 +70,12 @@
         <table class="table">
           <thead>
             <tr>
-              <th scope="col">#</th>
               <th colspan="2">Description</th>
               <th scope="col">Quantity</th>
               <th scope="col">Price</th>
             </tr>
           </thead>
-          <tbody class="table-group-divider">
-            <!-- <tr>
-              <th scope="row">1</th>
-              <td colspan="2">Camisa</td>
-              <td>1</td>
-              <td>20000</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td colspan="2">Pantalon</td>
-              <td>3</td>
-              <td>30000</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colspan="2">Zapatos</td>
-              <td>2</td>
-              <td>50000</td>
-            </tr> -->
-          </tbody>
+          <tbody id="tBody" class="table-group-divider"></tbody>
         </table>
       </div>
 
@@ -104,11 +84,11 @@
           <thead>
             <tr>
               <th colspan="4">Total items</th>
-              <th scope="row">0</th>
+              <th id="total-items" scope="row">0</th>
             </tr>
             <tr class="table-group-divider">
               <th colspan="4">TOTAL</th>
-              <th scope="row">00,00</th>
+              <th id="total-amount" scope="row">00,00</th>
             </tr>
           </thead>
         </table>
@@ -124,7 +104,7 @@
         >
           New invoice
         </button>
-        <button class="btn btn-success">Send to</button>
+        <button class="btn btn-success" id="create" >Send to</button>
         <button class="btn btn-danger">Cancel</button>
         <button
           type="button"
@@ -164,7 +144,7 @@
           <div class="modal-body">
             <div class="mb-3">
               <label for="document" class="form-label"
-                >Enter the customer's document number</label
+                >Enter the client's document number</label
               >
               <input
                 type="number"
@@ -173,10 +153,26 @@
                 placeholder="identification document"
               />
             </div>
+
+            <div class="mb-3">
+              <label for="documentEmployee" class="form-label"
+                >Enter the employee's identity document</label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="documentEmployee"
+                placeholder="identification document"
+              />
+            </div>
           </div>
 
           <div class="modal-footer">
-            <button type="button" id="consult-button" class="btn btn-primary">
+            <button
+              type="button"
+              id="consult-button-client"
+              class="btn btn-primary"
+            >
               Consult
             </button>
           </div>
@@ -216,10 +212,28 @@
                 placeholder="product reference"
               />
             </div>
+
+            <div class="mb-3">
+              <label for="quantityProduct" class="form-label"
+                >Enter the quantity</label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="quantityProduct"
+                placeholder="Quantity"
+              />
+            </div>
           </div>
 
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Consult</button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              id="consult-button-product"
+            >
+              Consult
+            </button>
           </div>
         </div>
       </div>
