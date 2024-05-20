@@ -134,7 +134,7 @@ function createInvoice() {
 
         const newInvoice = {
             date: formattedDate,
-            storeId: employeeData.storeId,
+            storeId: employeeData.store.id,
             employeeId: employeeData.id,
             clientId: clientData.id,
             itemList: productList.map(item => ({
