@@ -114,7 +114,13 @@
         >
           Add product
         </button>
-        <button class="btn btn-dark">Edit customer</button>
+        <button
+        type="button" 
+        class="btn btn-dark"
+        data-bs-toggle="modal"
+        data-bs-target="#editClient"
+        id = "edit"
+        >Edit client</button>
       </div>
     </section>
 
@@ -238,6 +244,82 @@
         </div>
       </div>
     </div>
+
+
+
+    <!--Modal Edit client -->
+    <div
+      class="modal fade"
+      id="editClient"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5">Edit client</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="nameClient" class="form-label"
+                >Enter new name</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="nameClientUpdate"
+                value=""
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label"
+                >Enter new email</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="emailClientUpdate"
+                value=""
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="phoneNumber" class="form-label"
+                >Enter new phone number</label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="phoneClientUpdate"
+                value=""
+              />
+            </div>
+
+
+          </div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-primary"
+              id="consult-button-product"
+            >
+              Edit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
     <!-- SCRIPT -->
 
