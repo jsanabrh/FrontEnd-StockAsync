@@ -2,10 +2,10 @@ const tableProducts = document.getElementById("tableProducts");
 
 export function printProducts(products) {
 
-  tableProducts.innerHTML = "";
+    tableProducts.innerHTML = "";
 
-    Array(products).forEach((product) => {
-
+    products.forEach((product) => {
+      
       const row = document.createElement("tr");
 
         row.innerHTML +=

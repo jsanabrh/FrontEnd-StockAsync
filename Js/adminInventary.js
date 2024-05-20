@@ -40,9 +40,10 @@ async function createProduct() {
 }
 
 async function getProducts(){
-    const data = get(URL_PRODUCTS)
-
-    printProducts(data)
+    
+    const data = await get(URL_PRODUCTS)
+    console.log(data["content"]);
+    printProducts(await data["content"])
 }
 
 export async function deleteProduct(id) {
