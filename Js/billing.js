@@ -9,6 +9,10 @@ const tableBody = document.getElementById('tBody');
 const totalAmount = document.getElementById('total-amount');
 const totalItems = document.getElementById('total-items');
 const create = document.getElementById('create');
+const editClient = document.getElementById('edit');
+const nameClientUpdate = document.getElementById('nameClientUpdate');
+const emailClientUpdate = document.getElementById('emailClientUpdate');
+const phoneClientUpdate = document.getElementById('phoneClientUpdate');
 
 
 
@@ -26,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () =>{
     consulEmployee()
     consulProduct();
     createInvoice();
+    updateClient();
 });
 
 
@@ -121,6 +126,29 @@ async function consulProduct() {
     });
 }
 
+async function updateClient(){
+
+    editClient.addEventListener("click", async() => {
+
+        const newClient = {
+            id: clientData.id,
+            name: nameClientUpdate.value,
+            email: emailClientUpdate.value,
+            phoneNumber: phoneClientUpdate.value,
+            DocumentType: clientData.DocumentType,
+            documentNumber: clientData.documentNumber
+        }
+
+        try {
+            const response = await put(URL_CLIENTS, newClient);
+            console.log('Client updated successfully:', response);
+        } catch (error) {
+            console.error('There was a problem with the fetch operation:', error);
+        }
+    })
+}
+
+
 function createInvoice() {
     create.addEventListener("click", async () => {
        
@@ -128,7 +156,7 @@ function createInvoice() {
         const year = today.getFullYear();
         const month = String(today.getMonth() + 1).padStart(2, '0');
         const day = String(today.getDate()).padStart(2, '0');
-        
+
         const formattedDate = `${year}-${month}-${day}`;
         console.log(formattedDate);
 

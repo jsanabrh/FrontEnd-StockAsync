@@ -118,8 +118,9 @@
         type="button" 
         class="btn btn-dark"
         data-bs-toggle="modal"
-        data-bs-target="#addProduct"
-        >Edit customer</button>
+        data-bs-target="#editClient"
+        id = "edit"
+        >Edit client</button>
       </div>
     </section>
 
@@ -246,10 +247,10 @@
 
 
 
-    <!-- Edit customer -->
+    <!--Modal Edit client -->
     <div
       class="modal fade"
-      id="edit customer"
+      id="editClient"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
@@ -257,7 +258,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5">Edit customer</h1>
+            <h1 class="modal-title fs-5">Edit client</h1>
             <button
               type="button"
               class="btn-close"
@@ -268,28 +269,42 @@
 
           <div class="modal-body">
             <div class="mb-3">
-              <label for="reference" class="form-label"
-                >Enter the product referen</label
+              <label for="nameClient" class="form-label"
+                >Enter new name</label
               >
               <input
-                type="number"
+                type="text"
                 class="form-control"
-                id="reference"
-                placeholder="product reference"
+                id="nameClientUpdate"
+                value=""
               />
             </div>
 
             <div class="mb-3">
-              <label for="quantityProduct" class="form-label"
-                >Enter the quantity</label
+              <label for="email" class="form-label"
+                >Enter new email</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="emailClientUpdate"
+                value=""
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="phoneNumber" class="form-label"
+                >Enter new phone number</label
               >
               <input
                 type="number"
                 class="form-control"
-                id="quantityProduct"
-                placeholder="Quantity"
+                id="phoneClientUpdate"
+                value=""
               />
             </div>
+
+
           </div>
 
           <div class="modal-footer">
@@ -298,7 +313,7 @@
               class="btn btn-primary"
               id="consult-button-product"
             >
-              Consult
+              Edit
             </button>
           </div>
         </div>
