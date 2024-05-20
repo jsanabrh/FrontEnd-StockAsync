@@ -1,4 +1,4 @@
-import { get, post } from "./clientHTTP.js"
+import { get, post, update } from "./clientHTTP.js"
 import { URL_CLIENTS, URL_EMPLOYEES, URL_INVOICE, URL_PRODUCTS } from "./urls.js";
 
 //Selectors
@@ -9,7 +9,12 @@ const tableBody = document.getElementById('tBody');
 const totalAmount = document.getElementById('total-amount');
 const totalItems = document.getElementById('total-items');
 const create = document.getElementById('create');
-
+const nameClientUpdate = document.getElementById('nameClientUpdate');
+const emailClientUpdate = document.getElementById('emailClientUpdate');
+const phoneClientUpdate = document.getElementById('phoneClientUpdate');
+const put = document.getElementById('put');
+const editClientModal = document.getElementById('editClient');
+const cancelButton = document.getElementById('cancel-button');
 
 
 let clientData = {};
@@ -26,8 +31,13 @@ document.addEventListener("DOMContentLoaded", () =>{
     consulEmployee()
     consulProduct();
     createInvoice();
+    updateClientData()
+    updateClient();
 });
 
+cancelButton.addEventListener('click', () => {
+    resetInvoiceForm();
+});
 
 
 
@@ -37,17 +47,15 @@ document.addEventListener("DOMContentLoaded", () =>{
 async function consulEmployee() {
     consultButton.addEventListener("click", async () => {
         const documentNumberEmployee = document.getElementById('documentEmployee').value;
-        console.log(documentNumberEmployee);
 
         try {
             const response = await get(`${URL_EMPLOYEES}/getByDocumentNumber/${documentNumberEmployee}`);
 
             if (response) {
                 employeeData = response;
-                console.log(employeeData);
                 
             } else {
-                employeeData = console.log("Client not found");
+                employeeData = console.log("Employee not found");
             }
         } catch (error) {
             console.error('There was a problem with the fetch operation:', error);
@@ -55,15 +63,12 @@ async function consulEmployee() {
     });
 }
 
-
 async function consulClient() {
     consultButton.addEventListener("click", async () => {
         const documentNumber = document.getElementById('document').value;
-        console.log(documentNumber);
 
         try {
             const response = await get(`${URL_CLIENTS}/getByDocumentNumber/${documentNumber}`);
-            console.log(response);
 
             if (response) {
                 clientData = response; // Alamcenamos los datos del cliente
@@ -75,25 +80,23 @@ async function consulClient() {
             console.error('There was a problem with the fetch operation:', error);
         }
     });
+
 }
 
 async function consulProduct() {
     consultButtonProduct.addEventListener("click", async () => {
         const idProduct = document.getElementById('reference').value;
         const quantity = parseInt(document.getElementById('quantityProduct').value);
-        console.log(idProduct);
-        console.log(quantity);
 
         try {
             const response = await get(`${URL_PRODUCTS}/${idProduct}`);
-            console.log(response);
 
+            
             if (response && response.name && response.price) {
                 const totalPriceProduct = response.price * quantity; 
                 totalPrice += totalPriceProduct; 
 
                 sumItems += quantity;
-
 
                 // Actualiza el DOM con el total acumulado
                 totalAmount.innerHTML = `${totalPrice}`;
@@ -119,6 +122,46 @@ async function consulProduct() {
             console.error('There was a problem with the fetch operation:', error);
         }
     });
+
+}
+
+function updateClientData() {
+
+    editClientModal.addEventListener('show.bs.modal', () => {
+
+
+        if (clientData) {
+            nameClientUpdate.value = clientData.name || '';
+            emailClientUpdate.value = clientData.email || '';
+            phoneClientUpdate.value = clientData.phoneNumber || '';
+        }
+    });
+
+}
+
+async function updateClient() {
+
+    put.addEventListener("click", async () => {
+
+        const newClient = {
+            id: clientData.id,
+            name: nameClientUpdate.value,
+            email: emailClientUpdate.value,
+            phoneNumber: phoneClientUpdate.value,
+            documentType: clientData.documentType,
+            documentNumber: clientData.documentNumber
+        }
+    
+        try {
+            const response = await update(`${URL_CLIENTS}/${clientData.id}`, newClient);
+            console.log('Client updated successfully:', response);
+        } catch (error) {
+            console.error('There was a problem with the fetch operation:', error);
+        }
+
+    })
+    
+
 }
 
 function createInvoice() {
@@ -128,9 +171,9 @@ function createInvoice() {
         const year = today.getFullYear();
         const month = String(today.getMonth() + 1).padStart(2, '0');
         const day = String(today.getDate()).padStart(2, '0');
-        
+
         const formattedDate = `${year}-${month}-${day}`;
-        console.log(formattedDate);
+
 
         const newInvoice = {
             date: formattedDate,
@@ -144,7 +187,7 @@ function createInvoice() {
             }))
         };
 
-        console.log(newInvoice);
+
 
         try {
             const response = await post(URL_INVOICE, newInvoice);
@@ -155,3 +198,29 @@ function createInvoice() {
     });
 
 }
+
+function resetInvoiceForm() {
+    // Limpiar los campos del formulario del cliente y empleado
+    document.getElementById('document').value = '';
+    document.getElementById('documentEmployee').value = '';
+    nameClient.innerHTML = 'Client';
+    
+    // Limpiar los campos del formulario del producto
+    document.getElementById('reference').value = '';
+    document.getElementById('quantityProduct').value = '';
+    tableBody.innerHTML = '';
+
+    // Restablecer los totales
+    totalAmount.innerHTML = '00,00';
+    totalItems.innerHTML = '0';
+
+    // Restablecer las variables globales
+    clientData = {};
+    employeeData = {};
+    productList = [];
+    totalPrice = 0;
+    sumItems = 0;
+}
+
+
+
