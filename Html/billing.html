@@ -24,7 +24,7 @@
         />
       </div>
 
-      <div class="userProfile">
+      <!-- <div class="userProfile">
         <div class="logo"></div>
         <img src="../Img/profilePicture.png" alt="" />
         <div class="infoUser">
@@ -33,7 +33,7 @@
             <span class="id">1000034345</span>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <nav class="navegation">
         <ul>
@@ -63,7 +63,7 @@
     <section class="billing-container">
       <div class="client-info">
         <h3>Invoice</h3>
-        <h4 id="name-client">user</h4>
+        <h4 id="name-client">Client</h4>
       </div>
 
       <div class="table-description">
@@ -104,8 +104,11 @@
         >
           New invoice
         </button>
-        <button class="btn btn-success" id="create" >Send to</button>
-        <button class="btn btn-danger">Cancel</button>
+
+        <button class="btn btn-success" id="create">Send to</button>
+
+        <button class="btn btn-danger" id="cancel-button">Cancel</button>
+
         <button
           type="button"
           class="btn btn-dark"
@@ -114,13 +117,16 @@
         >
           Add product
         </button>
+
         <button
-        type="button" 
-        class="btn btn-dark"
-        data-bs-toggle="modal"
-        data-bs-target="#editClient"
-        id = "edit"
-        >Edit client</button>
+          type="button"
+          class="btn btn-dark"
+          data-bs-toggle="modal"
+          data-bs-target="#editClient"
+          id="editModal"
+        >
+          Edit client
+        </button>
       </div>
     </section>
 
@@ -178,6 +184,7 @@
               type="button"
               id="consult-button-client"
               class="btn btn-primary"
+              data-bs-dismiss="modal"
             >
               Consult
             </button>
@@ -237,6 +244,7 @@
               type="button"
               class="btn btn-primary"
               id="consult-button-product"
+              data-bs-dismiss="modal"
             >
               Consult
             </button>
@@ -244,8 +252,6 @@
         </div>
       </div>
     </div>
-
-
 
     <!--Modal Edit client -->
     <div
@@ -269,9 +275,7 @@
 
           <div class="modal-body">
             <div class="mb-3">
-              <label for="nameClient" class="form-label"
-                >Enter new name</label
-              >
+              <label for="nameClient" class="form-label">Enter new name</label>
               <input
                 type="text"
                 class="form-control"
@@ -281,9 +285,7 @@
             </div>
 
             <div class="mb-3">
-              <label for="email" class="form-label"
-                >Enter new email</label
-              >
+              <label for="email" class="form-label">Enter new email</label>
               <input
                 type="text"
                 class="form-control"
@@ -303,15 +305,14 @@
                 value=""
               />
             </div>
-
-
           </div>
 
           <div class="modal-footer">
             <button
               type="button"
               class="btn btn-primary"
-              id="consult-button-product"
+              id="put"
+              data-bs-dismiss="modal"
             >
               Edit
             </button>
@@ -319,7 +320,6 @@
         </div>
       </div>
     </div>
-
 
     <!-- SCRIPT -->
 
