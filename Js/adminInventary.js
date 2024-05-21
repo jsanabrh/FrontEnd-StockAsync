@@ -35,6 +35,9 @@ formModal.addEventListener("click", async (event) => {
         window.location.reload()
 });
 
+btnModalUpd.addEventListener("click",async () =>{
+    
+})
 
 
 // Funciones
@@ -109,3 +112,4 @@ function updateButtons() {
     previousButton.disabled = currentProductPage === 0;
     nextButton.disabled = currentProductPage >= Math.ceil(totalProducts / productsPerPage) ;
 }
+

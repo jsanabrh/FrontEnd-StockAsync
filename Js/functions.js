@@ -1,4 +1,10 @@
+
+import { update } from "./clientHTTP.js";
+import { URL_PRODUCTS } from "./urls.js";
+
 export const tableProducts = document.getElementById("tableProducts");
+
+
 
 export function printProducts(products) {
   tableProducts.innerHTML = "";
@@ -125,12 +131,33 @@ export function printProducts(products) {
 
     tableProducts.appendChild(row);
 
-    tableProducts.querySelectorAll(".edit-user-btn").forEach((button) => {
-      button.addEventListener("click", async function () {
-        const dataId = this.getAttribute("data-id");
-        console.log(dataId);
-        editData(dataId);
-      });
-    });
   });
+//   let btnModalUpd = document.querySelectorAll(".edit-user-btn")
+// let currentDataId = btnModalUpd.getAttribute("data-id")
+
+//   tableProducts.querySelectorAll(".btnFormEditSend").forEach((button) => {
+//     button.addEventListener("click", async function () {
+//       console.log(currentDataId);
+//       updateProduct(currentDataId);
+//       // window.location.reload
+// });
+//   });
 }
+
+// export async function updateProduct() {
+//     const nameProduct = document.getElementById("nameUpd")
+//     const priceProduct = document.getElementById("priceUpd")
+//     const colorProduct = document.getElementById("colorUpd")
+//     const sizeProduct = document.getElementById("sizeUpd")
+//     const stockProduct = document.getElementById("stockUpd")
+
+//     const productUpdate = {
+//         name: nameProduct.value,
+//         price: priceProduct.value,
+//         color: colorProduct.value,
+//         size: sizeProduct.value,
+//         stock: stockProduct.value
+//     };
+
+//     await update(`${URL_PRODUCTS}/${currentDataId}`, productUpdate);
+// }
