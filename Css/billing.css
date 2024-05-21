@@ -1,0 +1,404 @@
+:root {
+  --color-navbarLeft: rgb(255, 255, 255);
+  --color-text: #fff;
+  --color-textMenu: rgb(134, 136, 144);
+  --color-menuHover: #353535;
+  --color-background: #d1cfcf;
+  --color-menuHoverText: rgb(0, 0, 0);
+  --color-button: rgb(0, 0, 0);
+  --color-textButton: rgb(255, 255, 255);
+  --color-line: rgb(241, 241, 241);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background: var(--color-background);
+  display: flex;
+}
+
+.navbarLeft {
+  width: 250px;
+  height: 100%;
+  overflow: hidden;
+  padding: 20px 15px;
+  background: var(--color-menuHover);
+}
+
+.ocultNavbarLeft {
+  width: 80px;
+}
+
+.navbarLeft .namePage {
+  margin-top: 10px;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  filter: drop-shadow(5px 10px 4px #000);
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(-180deg);
+  }
+}
+
+.navbarLeft .namePage img {
+  min-width: 50px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.navbarLeft .namePage span {
+  font-size: 25px;
+  margin-left: 5px;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.navbarLeft span.ocult {
+  opacity: 0;
+}
+
+/*------->Profile User*/
+
+.navbarLeft .userProfile {
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  border-radius: 10px;
+}
+
+.navbarLeft .userProfile img {
+  width: 50px;
+  min-width: 50px;
+  border-radius: 10px;
+}
+
+.navbarLeft .userProfile .infoUser {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--color-text);
+  overflow: hidden;
+}
+
+.navbarLeft .userProfile .name-id {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.navbarLeft .userProfile .name {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.navbarLeft .userProfile .id {
+  font-size: 11px;
+}
+
+/*------->Navegation*/
+
+.navbarLeft .navegation {
+  margin-top: 15px;
+}
+
+.navbarLeft .navegation li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbarLeft .navegation a {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 10px;
+  color: var(--color-text);
+}
+
+.navbarLeft .navegation a:hover {
+  background-color: var(--color-menuHover);
+  color: var(--color-menuHoverText);
+}
+
+.navbarLeft .navegation ion-icon {
+  min-width: 50px;
+  font-size: 20px;
+}
+
+/*------------ Billing Container  --------------------*/
+
+.billing-container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 2rem;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.billing-container .client-info {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.table > :not(caption) > * > * {
+  background-color: transparent;
+  border: none;
+}
+
+.billing-container .buttoms {
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}
+
+.billing-container .buttoms button {
+  margin: 10px;
+}
+
+.billing-container .buttoms a {
+  text-decoration: none;
+  color: #fff;
+}
+
+:root {
+  --color-navbarLeft: rgb(255, 255, 255);
+  --color-text: #fff;
+  --color-textMenu: rgb(134, 136, 144);
+  --color-menuHover: #353535;
+  --color-background: #d1cfcf;
+  --color-menuHoverText: rgb(0, 0, 0);
+  --color-button: rgb(0, 0, 0);
+  --color-textButton: rgb(255, 255, 255);
+  --color-line: rgb(241, 241, 241);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  height: 100vh;
+  width: 100%;
+  background: var(--color-background);
+  display: flex;
+}
+
+.navbarLeft {
+  width: 250px;
+  height: 100%;
+  overflow: hidden;
+  padding: 20px 15px;
+  background: var(--color-menuHover);
+}
+
+.ocultNavbarLeft {
+  width: 80px;
+}
+
+.navbarLeft .namePage {
+  margin-top: 10px;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  filter: drop-shadow(5px 10px 4px #000);
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateY(180deg);
+  }
+
+  to {
+    transform: rotateY(-180deg);
+  }
+}
+
+.navbarLeft .namePage img {
+  min-width: 50px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.navbarLeft .namePage span {
+  font-size: 25px;
+  margin-left: 5px;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.navbarLeft span.ocult {
+  opacity: 0;
+}
+
+/*------->Profile User*/
+
+.navbarLeft .userProfile {
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  border-radius: 10px;
+}
+
+.navbarLeft .userProfile img {
+  width: 50px;
+  min-width: 50px;
+  border-radius: 10px;
+}
+
+.navbarLeft .userProfile .infoUser {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--color-text);
+  overflow: hidden;
+}
+
+.navbarLeft .userProfile .name-id {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.navbarLeft .userProfile .name {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.navbarLeft .userProfile .id {
+  font-size: 11px;
+}
+
+/*------->Navegation*/
+
+.navbarLeft .navegation {
+  margin-top: 15px;
+}
+
+.navbarLeft .navegation li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbarLeft .navegation a {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 10px;
+  color: var(--color-text);
+}
+
+.navbarLeft .navegation a:hover {
+  background-color: var(--color-menuHover);
+  color: var(--color-menuHoverText);
+}
+
+.navbarLeft .navegation ion-icon {
+  min-width: 50px;
+  font-size: 20px;
+}
+
+/*------------ Billing Container  --------------------*/
+
+.billing-container {
+  width: 80%;
+  margin: 2rem;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.billing-container .client-info {
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.table > :not(caption) > * > * {
+  background-color: transparent;
+  border: none;
+}
+
+.billing-container .buttoms {
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}
+
+.billing-container .buttoms button {
+  margin: 10px;
+}
+
+/* Invoice set to client */
+
+.invoice-view-container {
+  width: 80%;
+  margin: 2rem;
+  padding: 10px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+
+.invoice-view-container img {
+  width: 150px;
+  margin: 20px 0;
+}
+
+.invoice-view-container h1 {
+  margin: 20px 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.invoice-view-container table {
+  width: 80%;
+  max-width: 600px;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.invoice-view-container th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.invoice-view-container th {
+  background-color: #f2f2f2;
+  color: #333;
+  font-weight: bold;
+}
+
+.invoice-view-container td {
+  color: #555;
+}
+
