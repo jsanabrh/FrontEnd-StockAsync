@@ -61,75 +61,112 @@
     </div>
 
     <section class="billing-container">
-      <div class="client-info">
-        <h3>Invoice</h3>
-        <h4 id="name-client">Client</h4>
+      <div class="invoice-container">
+        <div class="client-info">
+          <h3>Invoice</h3>
+          <h4 id="name-client">Client</h4>
+        </div>
+
+        <div class="table-description">
+          <table class="table">
+            <thead>
+              <tr>
+                <th colspan="2">Description</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Price</th>
+              </tr>
+            </thead>
+            <tbody id="tBody" class="table-group-divider"></tbody>
+          </table>
+        </div>
+
+        <div class="table-total">
+          <table class="table table-total">
+            <thead>
+              <tr>
+                <th colspan="4">Total items</th>
+                <th id="total-items" scope="row">0</th>
+              </tr>
+              <tr class="table-group-divider">
+                <th colspan="4">TOTAL</th>
+                <th id="total-amount" scope="row">00,00</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+
+        <div class="buttoms">
+          <button
+            type="button"
+            class="btn btn-dark"
+            data-bs-toggle="modal"
+            data-bs-target="#newInvoice"
+            id="consultInvoice"
+          >
+            New invoice
+          </button>
+
+          <button class="btn btn-success" id="create">Send to</button>
+
+          <button class="btn btn-danger" id="cancel-button">Cancel</button>
+
+          <button
+            type="button"
+            class="btn btn-dark"
+            data-bs-toggle="modal"
+            data-bs-target="#addProduct"
+          >
+            Add product
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-dark"
+            data-bs-toggle="modal"
+            data-bs-target="#editClient"
+            id="editModal"
+          >
+            Edit client
+          </button>
+        </div>
       </div>
 
-      <div class="table-description">
-        <table class="table">
-          <thead>
-            <tr>
-              <th colspan="2">Description</th>
-              <th scope="col">Quantity</th>
-              <th scope="col">Price</th>
-            </tr>
-          </thead>
-          <tbody id="tBody" class="table-group-divider"></tbody>
+      <!--table invoice -->
+
+      <!-- <div class="invoice-view-container">
+        <div class="invoiceInfo">
+          <h1 id="idInvoice">INVOICE {idInvoice}</h1>
+        </div>
+
+         <img src="../Img/logo_gris-removebg-preview.png" alt="" />
+
+        <table id="tableInvoice">
+          <tr>
+            <th>STORE</th>
+            <td id="nameStore">{store}</td>
+          </tr>
+          <tr>
+            <th>CLIENT</th>
+            <td id="nameClient">{nameClient}</td>
+          </tr>
+          <tr>
+            <th>DATE</th>
+            <td id="dateInvoice">{date}</td>
+          </tr>
+          <tr>
+            <th>EMPLOYEE</th>
+            <td id="nameEmployee">{nameEmployee}</td>
+          </tr>
+          <tr>
+            <th>ITEM LIST</th>
+            <td id="items">{itemList}</td>
+          </tr>
+          <tr>
+            <th>TOTAL</th>
+            <td id="totalPurchasesInvoice">{totalPurchases}</td>
+          </tr>
         </table>
-      </div>
-
-      <div class="table-total">
-        <table class="table table-total">
-          <thead>
-            <tr>
-              <th colspan="4">Total items</th>
-              <th id="total-items" scope="row">0</th>
-            </tr>
-            <tr class="table-group-divider">
-              <th colspan="4">TOTAL</th>
-              <th id="total-amount" scope="row">00,00</th>
-            </tr>
-          </thead>
-        </table>
-      </div>
-
-      <div class="buttoms">
-        <button
-          type="button"
-          class="btn btn-dark"
-          data-bs-toggle="modal"
-          data-bs-target="#newInvoice"
-          id="consultInvoice"
-        >
-          New invoice
-        </button>
-
-        <button class="btn btn-success" id="create">
-          Send to
-        </button>
-
-        <button class="btn btn-danger" id="cancel-button">Cancel</button>
-
-        <button
-          type="button"
-          class="btn btn-dark"
-          data-bs-toggle="modal"
-          data-bs-target="#addProduct"
-        >
-          Add product
-        </button>
-
-        <button
-          type="button"
-          class="btn btn-dark"
-          data-bs-toggle="modal"
-          data-bs-target="#editClient"
-          id="editModal"
-        >
-          Edit client
-        </button>
-      </div>
+      </div> -->
     </section>
 
     <!-- Modals -->
