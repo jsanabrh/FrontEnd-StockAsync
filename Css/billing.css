@@ -146,6 +146,8 @@ body {
 /*------------ Billing Container  --------------------*/
 
 .billing-container {
+  display: flex;
+  flex-direction: column;
   width: 80%;
   margin: 2rem;
   padding: 10px;
@@ -352,3 +354,51 @@ body {
 .billing-container .buttoms button {
   margin: 10px;
 }
+
+/* Invoice set to client */
+
+.invoice-view-container {
+  width: 80%;
+  margin: 2rem;
+  padding: 10px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+
+.invoice-view-container img {
+  width: 150px;
+  margin: 20px 0;
+}
+
+.invoice-view-container h1 {
+  margin: 20px 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.invoice-view-container table {
+  width: 80%;
+  max-width: 600px;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.invoice-view-container th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.invoice-view-container th {
+  background-color: #f2f2f2;
+  color: #333;
+  font-weight: bold;
+}
+
+.invoice-view-container td {
+  color: #555;
+}
+

@@ -35,6 +35,8 @@ document.addEventListener("DOMContentLoaded", () =>{
     updateClient();
 });
 
+
+
 cancelButton.addEventListener('click', () => {
     resetInvoiceForm();
 });
@@ -164,8 +166,68 @@ async function updateClient() {
 
 }
 
+// function createInvoice() {
+//     create.addEventListener("click", async (event) => {
+//         event.preventDefault();
+       
+//         const today = new Date();
+//         const year = today.getFullYear();
+//         const month = String(today.getMonth() + 1).padStart(2, '0');
+//         const day = String(today.getDate()).padStart(2, '0');
+//         const formattedDate = `${year}-${month}-${day}`;
+
+//         const newInvoice = {
+//             date: formattedDate,
+//             storeId: employeeData.store.id,
+//             employeeId: employeeData.id,
+//             clientId: clientData.id,
+//             itemList: productList.map(item => ({
+//                 product_id: item.product_id,
+//                 quantity: item.quantity,
+//                 price: item.price
+//             }))
+//         };
+
+//         try {
+//             const response = await post(URL_INVOICE, newInvoice);
+//             console.log('Invoice created successfully:', response);
+
+//             // Actualiza el DOM con los datos de la factura
+//             document.getElementById("nameStore").textContent = response.storeName || 'Store not found';
+//             document.getElementById("nameClient").textContent = response.clientName || 'Client not found';
+//             document.getElementById("dateInvoice").textContent = formattedDate;
+//             document.getElementById("nameEmployee").textContent = response.employeeName || 'Employee not found';
+//             document.getElementById("totalPurchasesInvoice").textContent = totalPrice.toFixed(2);
+
+//             // Actualiza el DOM con la lista de productos
+//             const items = document.getElementById("items");
+//             items.innerHTML = ''; // Limpia la lista de items
+
+//             productList.forEach(item => {
+//                 const row = `<tr>
+//                                 <td>${item.product_id}</td>
+//                                 <td>${item.quantity}</td>
+//                                 <td>${item.price.toFixed(2)}</td>
+//                                 <td>${(item.quantity * item.price).toFixed(2)}</td>
+//                             </tr>`;
+//                 items.innerHTML += row;
+//             });
+
+//             // Resetea el formulario de la factura
+//             resetInvoiceForm();
+
+//         } catch (error) {
+//             console.error('There was a problem with the fetch operation:', error);
+//         }
+//     });
+// }
+
+
+
 function createInvoice() {
-    create.addEventListener("click", async () => {
+    create.addEventListener("click", async (event) => {
+
+        event.preventDefault();
        
         const today = new Date();
         const year = today.getFullYear();
@@ -189,10 +251,13 @@ function createInvoice() {
         try {
             const response = await post(URL_INVOICE, newInvoice);
             console.log('Invoice created successfully:', response);
+
         } catch (error) {
             console.error('There was a problem with the fetch operation:', error);
         }
 
+        
+    
     });
 
 
