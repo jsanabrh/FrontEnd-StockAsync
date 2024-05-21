@@ -1,10 +1,9 @@
-
 :root {
   --color-navbarLeft: rgb(255, 255, 255);
   --color-text: #fff;
   --color-textMenu: rgb(134, 136, 144);
-  --color-menuHover: #353535; 
-  --color-background: #D1CFCF; 
+  --color-menuHover: #353535;
+  --color-background: #d1cfcf;
   --color-menuHoverText: rgb(0, 0, 0);
   --color-button: rgb(0, 0, 0);
   --color-textButton: rgb(255, 255, 255);
@@ -17,14 +16,12 @@
   box-sizing: border-box;
 }
 
-
 body {
   height: 100vh;
   width: 100%;
-  background: var(--color-background); 
+  background: var(--color-background);
   display: flex;
 }
-
 
 .navbarLeft {
   width: 250px;
@@ -175,12 +172,17 @@ body {
   margin: 10px;
 }
 
+.billing-container .buttoms a {
+  text-decoration: none;
+  color: #fff;
+}
+
 :root {
   --color-navbarLeft: rgb(255, 255, 255);
   --color-text: #fff;
   --color-textMenu: rgb(134, 136, 144);
   --color-menuHover: #353535;
-  --color-background: #D1CFCF;
+  --color-background: #d1cfcf;
   --color-menuHoverText: rgb(0, 0, 0);
   --color-button: rgb(0, 0, 0);
   --color-textButton: rgb(255, 255, 255);
@@ -194,7 +196,7 @@ body {
 }
 
 body {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   height: 100vh;
   width: 100%;
   background: var(--color-background);
@@ -202,7 +204,7 @@ body {
 }
 
 .navbarLeft {
-  width: 250px; 
+  width: 250px;
   height: 100%;
   overflow: hidden;
   padding: 20px 15px;
@@ -336,7 +338,7 @@ body {
   margin-bottom: 20px;
 }
 
-.table> :not(caption)>*>* {
+.table > :not(caption) > * > * {
   background-color: transparent;
   border: none;
 }
@@ -350,4 +352,3 @@ body {
 .billing-container .buttoms button {
   margin: 10px;
 }
-
