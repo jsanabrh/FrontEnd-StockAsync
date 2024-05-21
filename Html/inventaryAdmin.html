@@ -30,28 +30,12 @@
         />
       </div>
 
-      <div class="userProfile">
-        <img src="../Img/profilePicture.png" alt="" />
-        <div class="infoUser">
-          <div class="name-id">
-            <span class="name">Juan Pablo</span>
-            <span class="id">1000034345</span>
-          </div>
-        </div>
-      </div>
-
       <nav class="navegation">
         <ul>
           <li>
             <a href="">
               <ion-icon name="cube-outline"></ion-icon>
               <span>Inventary</span>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <ion-icon name="bag-add-outline"></ion-icon>
-              <span>Add Product</span>
             </a>
           </li>
           <li>
@@ -82,30 +66,17 @@
               <th colspan="2">Description</th>
               <th scope="col">Quantity</th>
               <th scope="col">Price</th>
+              <th >Actions</th>
             </tr>
           </thead>
-          <tbody class="table-group-divider">
-            <tr>
-              <th scope="row">1</th>
-              <td colspan="2">Camisa</td>
-              <td>1</td>
-              <td>20000</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td colspan="2">Pantalon</td>
-              <td>3</td>
-              <td>30000</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colspan="2">Zapatos</td>
-              <td>2</td>
-              <td>50000</td>
-            </tr>
+          <tbody class="table-group-divider" id="tableProducts">
           </tbody>
         </table>
       </div>
+
+      <div id="products"></div>
+      <button class="btn btn-success" id="previousButton">Anterior</button>
+      <button class="btn btn-success" id="nextButton">Siguiente</button>
 
       <div class="buttoms">
         <button
@@ -184,6 +155,18 @@
               </div>
 
               <div class="mb-3">
+                <label for="color" class="form-label"
+                  >Enter the size of the product</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="size"
+                  placeholder="Enter the size of the product you want to register."
+                />
+              </div>
+
+              <div class="mb-3">
                 <label for="stock" class="form-label"
                   >Enter the stock of the product</label
                 >
@@ -192,18 +175,6 @@
                   class="form-control"
                   id="stock"
                   placeholder="Enter the stock of the product you want to register."
-                />
-              </div>
-
-              <div class="mb-3">
-                <label for="inventary" class="form-label"
-                  >Enter the inventory code to update</label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  id="inventary"
-                  placeholder="Enter the inventory code to update"
                 />
               </div>
             </form>
@@ -216,7 +187,7 @@
             >
               Close
             </button>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary btnFormSend">Send</button>
           </div>
         </div>
       </div>
@@ -237,7 +208,7 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script type="module" src="billingAdmin.html"></script>
-    <script src="/Js/index.js"></script>
+    <script src="../Js/index.js"></script>
+    <script type="module" src="../Js/adminInventary.js"></script>
   </body>
 </html>
