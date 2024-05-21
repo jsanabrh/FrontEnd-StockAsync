@@ -171,9 +171,7 @@ function createInvoice() {
         const year = today.getFullYear();
         const month = String(today.getMonth() + 1).padStart(2, '0');
         const day = String(today.getDate()).padStart(2, '0');
-
         const formattedDate = `${year}-${month}-${day}`;
-
 
         const newInvoice = {
             date: formattedDate,
@@ -188,14 +186,15 @@ function createInvoice() {
         };
 
 
-
         try {
             const response = await post(URL_INVOICE, newInvoice);
             console.log('Invoice created successfully:', response);
         } catch (error) {
             console.error('There was a problem with the fetch operation:', error);
         }
+
     });
+
 
 }
 

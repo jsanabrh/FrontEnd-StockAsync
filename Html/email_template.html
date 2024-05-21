@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../Css/billing.css" />
+    <link rel="icon" href="/Img/logo_gris-removebg-preview.png" />
+
+    <title>Invoice sent to the client</title>
+  </head>
+  <body>
+
+    <div class="navbarLeft">
+        <div class="namePage">
+          <img
+            src="../Img/logo_gris-removebg-preview.png"
+            class="imgLogo"
+            alt="Logo"
+          />
+        </div>
+  
+        <!-- <div class="userProfile">
+          <div class="logo"></div>
+          <img src="../Img/profilePicture.png" alt="" />
+          <div class="infoUser">
+            <div class="name-id">
+              <span class="name">Juan Pablo</span>
+              <span class="id">1000034345</span>
+            </div>
+          </div>
+        </div> -->
+  
+        <nav class="navegation">
+          <ul>
+            <li>
+              <a href="inventary.html">
+                <ion-icon name="cube-outline"></ion-icon>
+                <span>Inventary</span>
+              </a>
+            </li>
+  
+            <li>
+              <a href="">
+                <ion-icon name="newspaper-outline"></ion-icon>
+                <span>Billing</span>
+              </a>
+            </li>
+            <li>
+              <a href="loginStockSync.html">
+                <ion-icon name="exit-outline"></ion-icon>
+                <span>LogOut</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+    <div class="invoice">
+
+        <img src="/src/main/resources/Img/logo_gris-removebg-preview.png" alt="" />
+    
+        <h1>INVOICE {idInvoice}</h1>
+    
+        <table>
+          <tr>
+            <th>STORE</th>
+            <td>{store}</td>
+          </tr>
+          <tr>
+            <th>CLIENT</th>
+            <td>{nameClient}</td>
+          </tr>
+          <tr>
+            <th>DATE</th>
+            <td>{date}</td>
+          </tr>
+          <tr>
+            <th>EMPLOYEE</th>
+            <td>{nameEmployee}</td>
+          </tr>
+          <tr>
+            <th>ITEM LIST</th>
+            <td>{itemList}</td>
+          </tr>
+          <tr>
+            <th>TOTAL</th>
+            <td>{totalPurchases}</td>
+          </tr>
+        </table>
+    </div>
+
+  </body>
+</html>

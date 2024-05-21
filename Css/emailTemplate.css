@@ -1,3 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background: var(--color-background);
+}
+
 :root {
   --color-navbarLeft: rgb(255, 255, 255);
   --color-text: #fff;
@@ -10,18 +24,6 @@
   --color-line: rgb(241, 241, 241);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  height: 100vh;
-  width: 100%;
-  background: var(--color-background);
-  display: flex;
-}
 
 .navbarLeft {
   width: 250px;
@@ -170,11 +172,6 @@ body {
 
 .billing-container .buttoms button {
   margin: 10px;
-}
-
-.billing-container .buttoms a {
-  text-decoration: none;
-  color: #fff;
 }
 
 :root {
@@ -324,31 +321,41 @@ body {
   font-size: 20px;
 }
 
-/*------------ Billing Container  --------------------*/
+/* Invoice set to client */
 
-.billing-container {
+img {
+  width: 150px;
+  margin: 20px 0;
+}
+
+h1 {
+  margin: 20px 0;
+  font-size: 24px;
+  color: #333;
+}
+
+table {
   width: 80%;
-  margin: 2rem;
-  padding: 10px;
-  box-sizing: border-box;
+  max-width: 600px;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.billing-container .client-info {
-  color: #000000;
-  margin-bottom: 20px;
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
 }
 
-.table > :not(caption) > * > * {
-  background-color: transparent;
-  border: none;
+th {
+  background-color: #f2f2f2;
+  color: #333;
+  font-weight: bold;
 }
 
-.billing-container .buttoms {
-  display: flex;
-  align-items: end;
-  justify-content: end;
-}
-
-.billing-container .buttoms button {
-  margin: 10px;
+td {
+  color: #555;
 }
